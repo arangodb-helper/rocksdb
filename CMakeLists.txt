@@ -608,7 +608,7 @@ set(TESTS
 if(WITH_LIBRADOS)
   list(APPEND TESTS utilities/env_librados_test.cc)
 endif()
-
+if (FALSE)
 set(BENCHMARKS
   tools/db_bench.cc
   table/table_reader_bench.cc
@@ -683,3 +683,4 @@ foreach(sourcefile ${C_TEST_EXES})
     add_test(NAME ${exename} COMMAND ${exename}${ARTIFACT_SUFFIX})
     add_dependencies(check ${exename}${ARTIFACT_SUFFIX})
 endforeach(sourcefile ${C_TEST_EXES})
+endif()
