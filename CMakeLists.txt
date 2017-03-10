@@ -472,7 +472,9 @@ if(WIN32)
     COMPILE_FLAGS "/Fd${CMAKE_CFG_INTDIR}/rocksdblib${ARTIFACT_SUFFIX}.pdb")
 endif()
 
-add_library(rocksdb${ARTIFACT_SUFFIX} SHARED ${SOURCES})
+if (FALSE)
+  add_library(rocksdb${ARTIFACT_SUFFIX} SHARED ${SOURCES})
+endif()
 target_link_libraries(rocksdb${ARTIFACT_SUFFIX}
   ${THIRDPARTY_LIBS} ${SYSTEM_LIBS})
 
