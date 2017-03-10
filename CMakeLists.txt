@@ -228,7 +228,10 @@ endif()
 
 include_directories(${PROJECT_SOURCE_DIR})
 include_directories(${PROJECT_SOURCE_DIR}/include)
-include_directories(SYSTEM ${PROJECT_SOURCE_DIR}/third-party/gtest-1.7.0/fused-src)
+
+if (FALSE)
+  include_directories(SYSTEM ${PROJECT_SOURCE_DIR}/third-party/gtest-1.7.0/fused-src)
+endif()
 
 find_package(Threads REQUIRED)
 if(WIN32)
@@ -240,7 +243,9 @@ endif()
 set(ROCKSDB_LIBS rocksdblib${ARTIFACT_SUFFIX})
 set(LIBS ${ROCKSDB_LIBS} ${THIRDPARTY_LIBS} ${SYSTEM_LIBS})
 
-add_subdirectory(third-party/gtest-1.7.0/fused-src/gtest)
+if (FALSE)
+  add_subdirectory(third-party/gtest-1.7.0/fused-src/gtest)
+endif()
 add_subdirectory(tools)
 
 # Main library source code
