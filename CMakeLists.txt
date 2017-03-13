@@ -476,11 +476,11 @@ if (FALSE)
   add_library(rocksdb${ARTIFACT_SUFFIX} SHARED ${SOURCES})
 target_link_libraries(rocksdb${ARTIFACT_SUFFIX}
   ${THIRDPARTY_LIBS} ${SYSTEM_LIBS})
-endif()
 
 if(WIN32)
   set_target_properties(rocksdb${ARTIFACT_SUFFIX} PROPERTIES
     COMPILE_FLAGS "-DROCKSDB_DLL -DROCKSDB_LIBRARY_EXPORTS /Fd${CMAKE_CFG_INTDIR}/rocksdb${ARTIFACT_SUFFIX}.pdb")
+endif()
 endif()
 
 option(WITH_JNI "build with JNI" OFF)
