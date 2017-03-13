@@ -474,9 +474,9 @@ endif()
 
 if (FALSE)
   add_library(rocksdb${ARTIFACT_SUFFIX} SHARED ${SOURCES})
-endif()
 target_link_libraries(rocksdb${ARTIFACT_SUFFIX}
   ${THIRDPARTY_LIBS} ${SYSTEM_LIBS})
+endif()
 
 if(WIN32)
   set_target_properties(rocksdb${ARTIFACT_SUFFIX} PROPERTIES
